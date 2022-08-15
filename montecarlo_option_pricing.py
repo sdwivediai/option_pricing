@@ -4,7 +4,7 @@ import streamlit as st
 
 with st.sidebar:
     option_type = st.radio('Option Type', ['c', 'p'])
-    st.write(option_type)
+    
     stock_price = st.number_input('Enter stock price')
     strike_price = st.number_input('Enter strike price')
     days_to_maturity = st.number_input('Enter days to expire')
@@ -18,7 +18,7 @@ with st.sidebar:
     option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
 
     st.write(option_premium)
-    
+st.write(option_type)  
 def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps):
     payoff_sum = 0
     for j in range(num_reps):
