@@ -15,10 +15,6 @@ with st.sidebar:
     maturity = days_to_maturity/252
     
     
-    option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
-
-    st.write(option_premium)
-st.write(option_type)  
 def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps):
     payoff_sum = 0
     for j in range(num_reps):
@@ -31,3 +27,9 @@ def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_v
         payoff_sum += payoff
     premium = (payoff_sum/float(num_reps))*math.e**(-r*maturity)
     return premium
+
+
+option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
+
+st.write(option_premium)
+st.write(option_type)  
