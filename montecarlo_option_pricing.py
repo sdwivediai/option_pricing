@@ -7,7 +7,7 @@ with st.sidebar:
     
     stock_price = st.number_input('Enter stock price')
     strike_price = st.number_input('Enter strike price')
-    days_to_expire = st.slider('Number of days to expire', min_value=1, max_value=30, step=30)
+    days_to_expire = st.slider('Number of days to expire', min_value=1, max_value=30, step=1)
     interest_rate = st.number_input('Risk Free interest rate')
     hist_vol = st.number_input('Hist vol', min_value=0.01, step=0.001)
     num_reps = st.number_input('Enter number of reps', min_value=1000, step=500)
