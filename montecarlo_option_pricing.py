@@ -10,7 +10,7 @@ with st.sidebar:
     days_to_maturity = st.number_input('Enter days to expire')
     interest_rate = st.number_input('Risk Free interest rate')
     hist_vol = st.number_input('Hist vol')
-    num_reps = st.number_input('Enter number of reps')
+    num_reps = st.number_input('Enter number of reps', min_val=1, step=1)
     
     maturity = days_to_maturity/252
     
