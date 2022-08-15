@@ -31,5 +31,5 @@ def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_v
 
 option_premium = mc_euro_options(option_type,stock_price,strike_price,maturity,interest_rate,hist_vol,num_reps)  
 
-st.write(option_premium)
-st.write(option_type)  
+st.write('Option Premium according to Monte Carlo method:'+ option_premium)
+ 
