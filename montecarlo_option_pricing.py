@@ -4,12 +4,12 @@ import streamlit as st
 
 with st.sidebar:
     option_type = st.radio('Option Type', ['Call', 'Put'])
-    stock_price = st.text()
-    strike_price = st.text()
-    days_to_maturity = st.text()
-    interest_rate = st.text()
-    hist_vol = st.text()
-    num_reps = st.text()
+    stock_price = st.number_input('Enter stock price')
+    strike_price = st.number_input('Enter strike price')
+    days_to_maturity = st.number_input('Enter days to expire')
+    interest_rate = st.number_input('Risk Free interest rate')
+    hist_vol = st.number_input('Hist vol')
+    num_reps = st.number_input('Enter number of reps')
     
 maturity = days_to_maturity/252
     
