@@ -5,8 +5,8 @@ import streamlit as st
 with st.sidebar:
     option_type = st.radio('Option Type', ['c', 'p'])
     
-    stock_price = st.number_input('Enter stock price')
-    strike_price = st.number_input('Enter strike price')
+    stock_price = st.number_input('Enter stock price', min_value=0, step=0.1)
+    strike_price = st.number_input('Enter strike price', min_value=0, step=20)
     days_to_expire = st.slider('Number of days to expire', min_value=1, max_value=30, step=1)
     interest_rate = st.number_input('Risk Free interest rate')
     hist_vol = st.number_input('Hist vol', min_value=0.01, step=0.001)
