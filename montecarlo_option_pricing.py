@@ -4,6 +4,7 @@ import streamlit as st
 
 with st.sidebar:
     option_type = st.radio('Option Type', ['c', 'p'])
+    st.write(option_type)
     stock_price = st.number_input('Enter stock price')
     strike_price = st.number_input('Enter strike price')
     days_to_maturity = st.number_input('Enter days to expire')
