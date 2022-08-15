@@ -7,12 +7,12 @@ with st.sidebar:
     
     stock_price = st.number_input('Enter stock price')
     strike_price = st.number_input('Enter strike price')
-    days_to_maturity = st.number_input('Enter days to expire')
+    days_to_expire = st.slider('Number of days to expire', min_value=1, max_value=30, step=30)
     interest_rate = st.number_input('Risk Free interest rate')
-    hist_vol = st.number_input('Hist vol')
-    num_reps = st.number_input('Enter number of reps', min_value=1, step=1)
+    hist_vol = st.number_input('Hist vol', min_value=0.01, step=0.001)
+    num_reps = st.number_input('Enter number of reps', min_value=1000, step=500)
     
-    maturity = days_to_maturity/252
+    maturity = days_to_expire/252
     
     
 def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps):
