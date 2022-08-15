@@ -29,7 +29,7 @@ def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_v
     return premium
 
 
-option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
+option_premium = mc_euro_options(option_type,stock_price,strike_price,maturity,interest_rate,hist_vol,num_reps)  
 
 st.write(option_premium)
 st.write(option_type)  
