@@ -25,7 +25,7 @@ def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_v
         elif option_type == 'p':
             payoff = max(0,strike-price)
         payoff_sum += payoff
-    premium = (payoff_sum/float(num_reps))*math.e**(-r*maturity)
+    premium = (payoff_sum/float(num_reps))*math.e**(-interest_rate*maturity)
     return premium
 
 
