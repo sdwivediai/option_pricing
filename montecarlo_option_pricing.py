@@ -11,12 +11,12 @@ with st.sidebar:
     hist_vol = st.number_input('Hist vol')
     num_reps = st.number_input('Enter number of reps')
     
-maturity = days_to_maturity/252
+    maturity = days_to_maturity/252
     
     
-option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
+    option_premium = mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps)  
 
-st.write(option_premium)
+    st.write(option_premium)
     
 def mc_euro_options(option_type,stock_price,strike,maturity,interest_rate,hist_vol,num_reps):
     payoff_sum = 0
